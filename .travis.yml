@@ -28,3 +28,5 @@ after_success:
   - docker push locnq2/udagram-api-user:v2
   - docker push locnq2/udagram-frontend:v2
   - docker push locnq2/udagram-reverseproxy:v2
+
+  kubectl expose deployment reverseproxy --type=LoadBalancer --name=publicreverseproxy

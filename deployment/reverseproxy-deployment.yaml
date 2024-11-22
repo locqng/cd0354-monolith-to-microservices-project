@@ -13,10 +13,10 @@ spec:
     metadata:
       labels:
         service: reverseproxy
-      name: backend-user
+      name: reverseproxy
     spec:
       containers:
-        - image: locnq2/udagram-reverseproxy:v1
+        - image: locnq2/udagram-reverseproxy:v2
           name: reverseproxy
           imagePullPolicy: Always
           resources:
@@ -27,5 +27,5 @@ spec:
               memory: "1024Mi"
               cpu: "500m"
           ports:
-            - containerPort: 8080
+            - containerPort: 80
       restartPolicy: Always
