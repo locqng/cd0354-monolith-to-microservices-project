@@ -13,7 +13,7 @@ spec:
     metadata:
       labels:
         service: reverseproxy
-      name: api-user
+      name: backend-user
     spec:
       containers:
         - image: locnq2/udagram-reverseproxy:v2
